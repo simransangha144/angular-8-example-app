@@ -1,0 +1,22 @@
+version: '0.2'
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+  pre_build:
+    commands:
+      - echo "Prebuild, installing npm dependencies"
+      - npm install
+      - npm install -g @angular/cli@8.3.7
+      - ng -v
+  build:
+    commands:
+      - echo "Starting the build step"
+      - mkdir dist && chmod a+rx dist
+      - ng build --prod
+      - echo "Finished"
+artifacts:
+  name: "BuildOutput"
+  files:
+    - '**/*'
+  base-directory: 'dist'
