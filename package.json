@@ -2,7 +2,7 @@
   "name": "angular-8-example-app",
   "description": "Angular 8 Example App. Routing and Http. Architecture for Large Scale. Angular Best Practices.",
   "author": "AngularExample https://github.com/angularexample",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
